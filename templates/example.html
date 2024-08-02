@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado del Análisis de Sentimiento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Análisis de Sentimiento</h1>
+        <form action="/example" method="post">
+            <label for="user_input">Introduce el texto para analizar:</label>
+            <textarea id="user_input" name="user_input" rows="4" required></textarea>
+            <br>
+            <button type="submit">Analizar Sentimiento</button>
+        </form>
+        {% if user_input %}
+            <h2>Resultado del Análisis de Sentimiento</h2>
+            <p><strong>Texto Analizado:</strong> {{ user_input }}</p>
+            <p><strong>Resultado:</strong> {{ processed_output }}</p>
+        {% endif %}
+        <a href="/" class="button">Volver a Inicio</a>
+    </div>
+</body>
+</html>
