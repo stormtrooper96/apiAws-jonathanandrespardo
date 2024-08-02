@@ -6,6 +6,7 @@ WORKDIR /app
 
 # Copia el archivo de requerimientos y el script de la aplicación
 COPY requirements.txt requirements.txt
+COPY analysetest.py.py analysetest.py.py
 COPY app.py app.py
 COPY templates/ templates/
 
