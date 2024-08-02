@@ -14,7 +14,7 @@ COPY templates/ templates/
 RUN pip install -r requirements.txt
 
 # Expone el puerto en el que correrá la aplicación
-EXPOSE 8080
+EXPOSE 5000
 
 # Comando para correr la aplicación
 CMD ["python", "app.py"]
